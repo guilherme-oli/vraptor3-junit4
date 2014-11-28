@@ -48,10 +48,9 @@ public class UsuarioControllerTest {
     }
 
     @Test
-    public void testLista() {
-        System.out.println("lista");        
-        usuarioController.lista();
-        fail("The test case is a prototype.");
+    public void testLista() {      
+        usuarioController.lista();    
+        assertNotNull("Result não preenchido", result.included().get("usuarios"));        
     }
     
 }
